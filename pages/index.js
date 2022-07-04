@@ -13,6 +13,9 @@ export default function Home() {
     <>
       <Head>
         <title>Yuiko | My Design to Code Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet"></link>
       </Head>
       <Hero />
       <ProjectList data={list}/>
