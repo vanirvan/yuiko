@@ -12,7 +12,7 @@ const Hero = () =>{
                 <span className="text-gray-800">.</span>
                 <span className="text-amber-500">transform</span>
                 <span className="text-purple-500">(</span>
-                <span className="text-amber-800">"code"</span>
+                <span className="text-amber-800">&ldquo;code&rdquo;</span>
                 <span className="text-purple-500">)</span>
             </div>
         </div>
