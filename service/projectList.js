@@ -4,7 +4,7 @@ const list = [
         title: "E-Commerce Homepage Design",
         author: "Bitmate Studio",
         source: "https://dribbble.com/shots/18615993-E-Commerce-Homepage-Design/",
-        github: "github.com/vanirvan/yuiko/ui/e-commerce-homepage-design/",
+        github: "https://github.com/vanirvan/yuiko/tree/main/pages/ui/e-commerce-homepage-design",
         preview: "https://yuiko-vanirvan.vercel.app/ui/e-commerce-homepage-design",
         date: "July 5, 2022"
     },
