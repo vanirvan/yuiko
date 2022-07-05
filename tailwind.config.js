@@ -16,8 +16,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        // 'carter': ['"Carter One"', 'cursive']
-        'carter': ['"Carter One"']
+        'carter': ['"Carter One"', 'cursive']
       },
     },
   },

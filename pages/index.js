@@ -3,23 +3,28 @@ import { useState } from 'react'
 
 import Hero from 'components/Hero'
 import ProjectList from 'components/ProjectList'
+import Modal from 'components/Modal'
 import About from 'components/About'
 
 import list from 'service/projectList'
 
 export default function Home() {
 
+  const [showModal, setShowModal] = useState(false)
+  const [modalData, setModalData] = useState({})
+  const getData = (id) => {
+    setModalData(list[id])
+    setShowModal(true)
+  }
+
   return (
     <>
       <Head>
         <title>Yuiko | My Design to Code Portfolio</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin></link>
-        <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet"></link>
       </Head>
       <Hero />
-      <ProjectList data={list}/>
-      {/* <Modal show={showModal} data={modalData} /> */}
+      <ProjectList data={list} getData={getData} />
+      <Modal data={modalData} show={showModal} triggerModal={setShowModal} />
       <About />
     </>
   )
