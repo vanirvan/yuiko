@@ -1,0 +1,261 @@
+.body{
+    overflow-x: hidden;
+}
+
+.navbar{
+    width: 100%;
+    padding: 1rem 5% 1rem 5%;
+    background-color: #080808;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_title{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar > div{
+    display: none;
+}
+
+.navbar > div > span{
+    color: white;
+    font-size: .75rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    cursor: pointer;
+}
+
+.navbar > div > div {
+    position: relative;
+    margin-left: .5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.iconMenu{
+    width: 1rem;
+    color: white;
+}
+
+.iconMouse{
+    width: 4rem;
+    height: 4rem;
+    color: black;
+}
+
+.hero{
+    position: relative;
+    padding: 3rem 5% 3rem 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #080808;
+}
+
+.hero > div:nth-child(1){
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2  ;
+}
+
+.hero > div:nth-child(1) > span{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.hero > div:nth-child(1) > span:nth-child(2){
+    font-weight: bold;
+}
+
+.hero > div:nth-child(1) > span:nth-child(3){
+    font-size: .75rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.hero > div:nth-child(1) > button{
+    width: max-content;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 999px;
+    padding: .5rem 1rem .5rem 1rem;
+}
+
+.hero > div:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: -48px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 12rem;
+    height: 12rem;
+    transform: scaleX(-1);
+    z-index: 1;
+}
+
+.carousel{
+    background-color: #F28312;
+    padding: 2rem 5% 2rem 5%;
+    overflow-x: scroll;
+    display: flex;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.scroll_down{
+    flex: none;
+    padding-left: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.scroll_down > div{
+    position: relative;
+}
+
+.scroll_down > div > span{
+    position: absolute;
+    width: max-content;
+    top: 50%;
+    font-size: .75rem;
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+.carousel_item{
+    width: 16rem;
+    flex: none;
+    border-radius: 2rem;
+    background-color: white;
+    padding: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel_image{
+    align-self: center;
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+}
+
+.carousel_item > span{
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: normal;
+}
+
+.carousel_item > span:nth-child(2){
+    font-size: 2rem;
+}
+
+.carousel_item > span:nth-child(4){
+    margin-top: 1rem;
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+/* Media Query */
+@media only screen and (min-width: 512px){
+    
+    .hero{
+        flex-direction: row;
+        padding: 3rem 5% 3rem 5%;
+    }
+
+    .hero > div:nth-child(2){
+        position: relative;
+        right: 0;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .navbar > :nth-child(2){
+        display: none;
+    }
+
+    .navbar > div{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 640px){
+    .scroll_down{
+        width: 40%;
+    }
+
+    .navbar > div > span{
+        margin-left: .75rem;
+        margin-right: .75rem;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .hero > div:nth-child(1) > span{
+        font-size: 2rem;
+    }
+
+    .navbar_title{
+        font-size: 1.5rem;
+    }
+
+    .navbar > div > span{
+        color: white;
+        font-size: 1rem;
+    }
+
+    .navbar > div > div {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .navbar > div > span{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .hero > div:nth-child(1) > span{
+        font-size: 2.5rem;
+    }
+
+    .navbar > div > span{
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+
+    .hero > div:nth-child(1) > span{
+        font-size: 3rem;
+    }
+    .hero > div:nth-child(1) > span:nth-child(3){
+        font-size: 1rem;
+    }
+    .scroll_down{
+        width: 30%;
+    }
+    .navbar > div > span{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
