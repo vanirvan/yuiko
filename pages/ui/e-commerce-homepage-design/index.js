@@ -3,6 +3,7 @@ import style from './index.module.css'
 
 import IconMouse from './assets/iconMouse'
 import IconMenu from './assets/iconMenu'
+import Head from 'next/head'
 
 const Index = () => {
 
@@ -37,52 +38,57 @@ const Index = () => {
     ]
 
     return (
-        <div className={`${style.body}`}>
-            {/* Navbar */}
-            <div className={`${style.navbar}`}>
-                <span className={`${style.navbar_title}`}>Chicory</span>
-                <IconMenu className={`${style.iconMenu}`} />
-                <div>
-                    { menuList.map((value, index) =>
-                        <span key={index}>{value}</span>
-                    )}
+        <>
+            <Head>
+                <title>E-Commerce Homepage Design</title>
+            </Head>
+            <div className={`${style.body}`}>
+                {/* Navbar */}
+                <div className={`${style.navbar}`}>
+                    <span className={`${style.navbar_title}`}>Chicory</span>
+                    <IconMenu className={`${style.iconMenu}`} />
                     <div>
-                        <Image src={`/assets/${projectPath}/chad.jpeg`} layout="fill" priority />
-                    </div>
-                </div>
-            </div>
-            {/* Hero */}
-            <div className={`${style.hero}`}>
-                <div>
-                    <span>Mid Century</span>
-                    <span>Newish Product</span>
-                    <span>Modern high quality and comfortable available in our stores.</span>
-                    <button>Explore Now</button>
-                </div>
-                <div>
-                    <Image src={`/assets/${projectPath}/chair1.png`} layout="fill" alt={"Chair"} priority />
-                </div>
-            </div>
-            {/* Carousel? */}
-            <div className={`${style.carousel}`}>
-                <div className={`${style.scroll_down}`}>
-                    <div>
-                        <span>Scroll Down</span>
-                    </div>
-                    <IconMouse className={`${style.iconMouse}`} />
-                </div>
-                { carouselItem.map((value, index) => 
-                    <div key={index} className={`${style.carousel_item}`}>
-                        <div className={`${style.carousel_image}`}>
-                        <Image src={`${value.img}`} alt='image 1' layout='fill' />
+                        { menuList.map((value, index) =>
+                            <span key={index}>{value}</span>
+                        )}
+                        <div>
+                            <Image src={`/assets/${projectPath}/chad.jpeg`} layout="fill" priority />
                         </div>
-                        <span>{value.id}</span>
-                        <span>{value.title}</span>
-                        <span>{value.desc}</span>
                     </div>
-                )}
+                </div>
+                {/* Hero */}
+                <div className={`${style.hero}`}>
+                    <div>
+                        <span>Mid Century</span>
+                        <span>Newish Product</span>
+                        <span>Modern high quality and comfortable available in our stores.</span>
+                        <button>Explore Now</button>
+                    </div>
+                    <div>
+                        <Image src={`/assets/${projectPath}/chair1.png`} layout="fill" alt={"Chair"} priority />
+                    </div>
+                </div>
+                {/* Carousel? */}
+                <div className={`${style.carousel}`}>
+                    <div className={`${style.scroll_down}`}>
+                        <div>
+                            <span>Scroll Down</span>
+                        </div>
+                        <IconMouse className={`${style.iconMouse}`} />
+                    </div>
+                    { carouselItem.map((value, index) => 
+                        <div key={index} className={`${style.carousel_item}`}>
+                            <div className={`${style.carousel_image}`}>
+                            <Image src={`${value.img}`} alt='image 1' layout='fill' />
+                            </div>
+                            <span>{value.id}</span>
+                            <span>{value.title}</span>
+                            <span>{value.desc}</span>
+                        </div>
+                    )}
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
