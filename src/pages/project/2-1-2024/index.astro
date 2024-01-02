@@ -1,0 +1,96 @@
+---
+import './style.scss';
+
+import SearchIcon from './icon/search-icon.svg?raw'
+import UserIcon from './icon/user-icon.svg?raw'
+import CartIcon from './icon/cart-icon.svg?raw'
+import TriangleIcon from './icon/triangle-icon.svg?raw'
+import PlusIcon from './icon/plus-icon.svg?raw'
+import ArrowIcon from './icon/arrow-icon.svg?raw'
+
+let projectDirectory = 'project/2-1-2024';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylezone Fashion Website - Manowar</title>
+</head>
+<body>
+  <main>
+    <section id="nav">
+      <div>
+        <h1><span id="style">STYLE</span> <span id="zone">ZONE</span></h1>
+        <div id="menu">
+          <a href="#" class="active">Trending</a>
+          <a href="#">Products</a>
+          <a href="#">Collections</a>
+          <a href="#">Casual</a>
+          <a href="#">Winters</a>
+        </div>
+        <div id="side-menu">
+          <div class="menu-item"><Fragment set:html={SearchIcon} /></div>
+          <div class="menu-item"><Fragment set:html={UserIcon} /></div>
+          <div class="menu-item active"><Fragment set:html={CartIcon} /></div>
+        </div>
+      </div>
+    </section>
+    <section id="content">
+      <div class="col-span-6">
+        <h1>
+          REVEALING LATEST FASHION
+          <img id="asterisk" src={`/assets/${projectDirectory}/asterisk.png`} >
+        </h1>
+        <h2>Fashion is part of the daily life which changes all the time, with all the events.</h2>
+        <div id="cta">
+          <button>Start Shopping</button>
+          <div id="play-video">
+            <div id="triangle">
+              <Fragment set:html={TriangleIcon} />
+            </div>
+            <span>How it work</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-6">
+        <div>
+          <div id="review">
+            <span>CHECK REVIEWS</span>
+            <div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle">
+                <div id="overlay"></div>
+                <Fragment set:html={PlusIcon} />
+              </div>
+            </div>
+          </div>
+          <div id="photo"></div>
+        </div>
+        <div>
+          <div id="photo"></div>
+          <span>TRANDY AND CLUSSI FOR NEW SEASON</span>
+        </div>
+      </div>
+      <div class="col-span-4">
+        <h1>SPECIAL OFFER</h1>
+        <span>Unlock 25% Off Your Debut Order! Seize the Chance to Snag Your Desired Streetwear </span>
+        <div id="price-tag">
+          25% OFF
+        </div>
+      </div>
+      <div class="col-span-6">
+        <h1>NEW COLLECTION</h1>
+        <span>I'm very much of the buy less but buy better persuation but never really knew where to look.</span>
+      </div>
+    </section>
+    <div id="scroll-down">
+      <span>SCROLL DOWN</span>
+      <div id="arrow">
+        <Fragment set:html={ArrowIcon} />
+      </div>
+    </div>
+  </main>
+</body>
+</html>
