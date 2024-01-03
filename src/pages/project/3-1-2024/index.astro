@@ -1,0 +1,339 @@
+---
+import CheckIcon from './icons/check-icon.svg?raw'
+import FacebookIcon from './icons/facebook-icon.svg?raw'
+import TwitterIcon from './icons/twitter-icon.svg?raw'
+import InstagramIcon from './icons/instagram-icon.svg?raw'
+import MailIcon from './icons/mail-icon.svg?raw'
+
+let projectDirectory = 'project/3-1-2024'
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaborify - Saas Team Management Landing Page</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href={`/assets/${projectDirectory}/favicon.ico`}>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN -->
+  <script type="text/javascript" src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      font-family: 'Nunito Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#f5f4f7]">
+  <main class="w-full max-w-7xl mx-auto flex flex-col gap-1 p-1">
+    <section id="nav" class="bg-white rounded-xl flex items-center justify-between py-4 px-16">
+      <h1 class="flex items-center gap-1 font-extrabold text-xl">
+        <img src={`/assets/${projectDirectory}/logo-light.png`} class="aspect-square w-5">
+        Collaborify
+      </h1>
+      <ul class="flex items-center gap-8 font-bold text-sm">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">pricing</a></li>
+        <li><a href="#">Testimonial</a></li>
+      </ul>
+      <button class="text-white bg-black rounded-xl py-2 px-4">Get Started</button>
+    </section>
+    <section id="hero" class="flex flex-col items-center justify-center gap-4 bg-white py-20 rounded-xl">
+      <h1 class="font-black text-5xl w-1/2 text-center">Empower Your Team Potential with Collaborify</h1>
+      <span class="font-semibold">Revolutionize Collaboration, Elevate Performance!</span>
+      <button class="text-white bg-black rounded-xl px-4 py-2">Get Started</button>
+    </section>
+    <section id="hero-img" class="bg-[#d4ff7e] flex flex-col items-center justify-center rounded-xl py-12 px-28">
+      <img src={`/assets/${projectDirectory}/1.png`} class="w-full">
+    </section>
+    <section id="introduction" class="bg-white rounded-xl flex flex-col gap-8 p-16">
+      <p class="border rounded-xl w-max px-4 py-2 border-black font-bold">Who We Are</p>
+      <span class="font-bold text-[1.78rem]">We are driven by the belief that successful teams are built on collaboration, innovation, and powerful insights. Our mission is to empower teams of all sizes to acheive their best by providing an intuitive and intellegent team management platform.</span>
+    </section>
+    <section id="features" class="grid grid-cols-2 gap-1">
+      <div class="bg-white rounded-xl flex flex-col justify-between p-16 aspect-square">
+        <p class="border rounded-xl w-max px-4 py-2 border-black font-bold">Features</p>
+        <div class="flex flex-col gap-4">
+          <h1 class="font-bold text-3xl">Team Collaboration</h1>
+          <h2 class="font-semibold">Improve teamwork by easily working together, no matter where your team members are located. Collaborify's Team Collaboration feature offers shared workspace, instant messaging, and tools for editing together in real-time, making collaboration simple.</h2>
+        </div>
+      </div>
+      <div class="bg-[#d4ff7e] rounded-xl flex flex-col justify-center items-center aspect-square p-8 w-full">
+        <img src={`/assets/${projectDirectory}/2.png`} class="w-full h-auto">
+      </div>
+      <div class="bg-[#d4ff7e] rounded-xl flex flex-col justify-center items-center aspect-square p-24 w-full">
+        <img src={`/assets/${projectDirectory}/3.png`} class="w-full h-auto">
+      </div>
+      <div class="bg-white rounded-xl flex flex-col justify-between p-16 aspect-square">
+        <p class="border rounded-xl w-max px-4 py-2 border-black font-bold">Features</p>
+        <div class="flex flex-col gap-4">
+          <h1 class="font-bold text-3xl">AI-Driven Insights</h1>
+          <h2 class="font-semibold">Get smart project insights with Collaborify's AI-Driven feature. It helps you make better decisions, predict project trends, and enhance your team's performance. It's like having a virtual assistant providing valuable advice based on intelligent analysis.</h2>
+        </div>
+      </div>
+    </section>
+    <section id="pricing" class="bg-white rounded-xl flex flex-col gap-8 p-16">
+      <h1 class="border rounded-xl w-max px-4 py-2 border-black font-bold">Pricing</h1>
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <p class="font-bold text-3xl">Choose Right Plan for Your Team</p>
+          <span class="font-semibold">Explore our flexible pricing options to find the perfect fit for your team's collaboration needs.</span>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="relative border rounded-xl flex flex-col gap-4 p-4">
+            <div class="absolute top-4 right-4 bg-[#d4ff80] p-2 rounded-lg font-extrabold text-xs">
+              Best for Small Teams
+            </div>
+            <span class="font-bold">Starter Plan</span>
+            <div class="flex items-end">
+              <span class="font-extrabold text-2xl">$4.99</span>
+              <span class="text-gray-500">/mo</span>
+            </div>
+            <ul class="flex flex-col">
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">Team Collaboration</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">AI-Driven Insights</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">Basic Task Management</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">Standart Support</span>
+              </li>
+            </ul>
+            <button class="w-full bg-black text-white rounded-xl py-2">Subscribe</button>
+          </div>
+          <div class="relative border rounded-xl flex flex-col gap-4 p-4">
+            <div class="absolute top-4 right-4 bg-[#d4ff80] p-2 rounded-lg font-extrabold text-xs">
+              Best for Medium Teams
+            </div>
+            <span class="font-bold">Pro Plan</span>
+            <div class="flex items-end">
+              <span class="font-extrabold text-2xl">$9.99</span>
+              <span class="text-gray-500">/mo</span>
+            </div>
+            <ul class="flex flex-col">
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">All features included in the starter plan.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">Unlimited Users</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">Priority Support</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">Advanced Analytics</span>
+              </li>
+            </ul>
+            <button class="w-full bg-black text-white rounded-xl py-2">Subscribe</button>
+          </div>
+          <div class="relative border rounded-xl flex flex-col gap-4 p-4">
+            <div class="absolute top-4 right-4 bg-[#d4ff80] p-2 rounded-lg font-extrabold text-xs">
+              Best for Growing Teams
+            </div>
+            <span class="font-bold">Pro Plan</span>
+            <div class="flex items-end">
+              <span class="font-extrabold text-2xl">$4.99</span>
+              <span class="text-gray-500">/mo</span>
+            </div>
+            <ul class="flex flex-col">
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">Customize Solutions</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">Dedicated Account Manager</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">Premium Support</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="relative w-4 h-4 border border-black rounded flex items-center justify-center">
+                  <Fragment set:html={CheckIcon} class="w-2 h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <span class="text-sm font-semibold">AI Optimization Services</span>
+              </li>
+            </ul>
+            <button class="w-full bg-black text-white rounded-xl py-2">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials" class="bg-white rounded-xl p-16 flex flex-col gap-8">
+      <h1 class="border rounded-xl w-max px-4 py-2 border-black font-bold">Testimonials</h1>
+      <div class="flex justify-between items-end">
+        <div class="flex flex-col gap-2">
+          <p class="font-bold text-3xl">What Our Users Say</p>
+          <span class="font-semibold">Real stories from real users who have experienced the impact of Collaborify on their teamsand projects.</span>
+        </div>
+        <button class="text-white bg-black rounded-xl px-4 py-2">See more testimonials</button>
+      </div>
+      <div class="grid grid-cols-3 gap-2">
+        <div class="flex flex-col gap-2">
+          <div class="border rounded-xl flex flex-col gap-2 p-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="aspect-square w-12 rounded-lg bg-blue-300"></div>
+                <span class="font-bold text-lg">Chatsuda Sucha
+              </div>
+              <span class="bg-[#fff7a7] px-2 py-1 rounded-lg text-xs font-bold">5 Stars</span>
+            </div>
+            <p class="font-semibold text-sm">As a project manager, I appreciate the
+              comprehensive analytics Collaborify provides. It's made tracking progress and resource allocation a breeze. Definitely a must-have for any team.</p>
+          </div>
+          <div class="border rounded-xl flex flex-col gap-2 p-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="aspect-square w-12 rounded-lg bg-blue-300"></div>
+                <span class="font-bold text-lg">Courtney Henry
+              </div>
+              <span class="bg-[#fff7a7] px-2 py-1 rounded-lg text-xs font-bold">5 Stars</span>
+            </div>
+            <p class="font-semibold text-sm">As a project manager, I appreciate the
+              comprehensive analytics Collaborify provides. It's made tracking progress and resource allocation a breeze. Definitely a must-have for any team.</p>
+          </div>
+          <div class="border rounded-xl flex flex-col gap-2 p-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="aspect-square w-12 rounded-lg bg-blue-300"></div>
+                <span class="font-bold text-lg">Piyanat Natakul
+              </div>
+              <span class="bg-[#fff7a7] px-2 py-1 rounded-lg text-xs font-bold">5 Stars</span>
+            </div>
+            <p class="font-semibold text-sm">Collaborify has made communication within our team seamless. The ability to collaborate in real- time, regardless of location, has been a game- changer for our remote work setup. Kudos to the Collaborify team!</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <div class="border rounded-xl flex flex-col gap-2 p-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="aspect-square w-12 rounded-lg bg-blue-300"></div>
+                <span class="font-bold text-lg">Guy Hawkins
+              </div>
+              <span class="bg-[#fff7a7] px-2 py-1 rounded-lg text-xs font-bold">4.8 Stars</span>
+            </div>
+            <p class="font-semibold text-sm">The simplicity of Collaborify is its strength. Even
+              team members with minimal tech experience find it easy to use. The task tracking and collaboration
+              features have improved our workflow
+              tremendously.</p>
+          </div>
+          <div class="border rounded-xl flex flex-col gap-2 p-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="aspect-square w-12 rounded-lg bg-blue-300"></div>
+                <span class="font-bold text-lg">Apirada Wongsasuk
+              </div>
+              <span class="bg-[#fff7a7] px-2 py-1 rounded-lg text-xs font-bold">4.6 Stars</span>
+            </div>
+            <p class="font-semibold text-sm">Collaborify has exceeded my expectations. The Al- driven insights have provided a new level of
+              understanding into our projects. It's a
+              comprehensive solution that every project manager should consider.</p>
+          </div>
+          <div class="border rounded-xl flex flex-col gap-2 p-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="aspect-square w-12 rounded-lg bg-blue-300"></div>
+                <span class="font-bold text-lg">Darell Steward
+              </div>
+              <span class="bg-[#fff7a7] px-2 py-1 rounded-lg text-xs font-bold">4.6 Stars</span>
+            </div>
+            <p class="font-semibold text-sm">I've tried several team management tools, but Collaborify stands out. The real-time collaboration features and Al-driven insights set it apart. A game- changer for any team!</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <div class="border rounded-xl flex flex-col gap-2 p-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="aspect-square w-12 rounded-lg bg-blue-300"></div>
+                <span class="font-bold text-lg">Fasai Areyanukul
+              </div>
+              <span class="bg-[#fff7a7] px-2 py-1 rounded-lg text-xs font-bold">4.7 Stars</span>
+            </div>
+            <p class="font-semibold text-sm">As a project manager, Collaborify has simplified my workload. The task management tools are intuitive, and the analytics provide valuable insights into our project's progress. Impressive!</p>
+          </div>
+          <div class="border rounded-xl flex flex-col gap-2 p-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="aspect-square w-12 rounded-lg bg-blue-300"></div>
+                <span class="font-bold text-lg">Nattha Srifatavee
+              </div>
+              <span class="bg-[#fff7a7] px-2 py-1 rounded-lg text-xs font-bold">4.7 Stars</span>
+            </div>
+            <p class="font-semibold text-sm">I appreciate the attention to detail in Collaborify's task management. The ability to organize, prioritize, and track tasks effortlessly has made managing projects much more efficient. A fantastic tool!</p>
+          </div>
+          <div class="border rounded-xl flex flex-col gap-2 p-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="aspect-square w-12 rounded-lg bg-blue-300"></div>
+                <span class="font-bold text-lg">Floyd Miles
+              </div>
+              <span class="bg-[#fff7a7] px-2 py-1 rounded-lg text-xs font-bold">5 Stars</span>
+            </div>
+            <p class="font-semibold text-sm">I've tried several team management tools, but Collaborify stands out. The real-time collaboration features and Al-driven insights set it apart. A game- changer for any team!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer" class="rounded-xl bg-black p-16 flex flex-col gap-8 text-white">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img src={`/assets/${projectDirectory}/logo-dark.png`} class="w-6 h-auto">
+          <span class="font-bold text-xl">Collaborify</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <Fragment set:html={FacebookIcon}/>
+          <Fragment set:html={TwitterIcon}/>
+          <Fragment set:html={InstagramIcon}/>
+          <Fragment set:html={MailIcon}/>
+        </div>
+      </div>
+      <div class="flex items-center justify-between">
+        <span class="font-medium">Copyright © 2023 Collaborify. All rights reserved.</span>
+        <div class="flex items-center gap-8">
+          <a href="#" class="font-bold">Policy service</a>
+          <a href="#" class="font-bold">Terms of Service</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
