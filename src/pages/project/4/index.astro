@@ -1,0 +1,308 @@
+---
+import './style.scss';
+
+import SearchIcon from './icons/search-icon.svg?raw'
+import UserIcon from './icons/user-icon.svg?raw'
+import HeartIcon from './icons/heart-icon.svg?raw'
+import BagIcon from './icons/bag-icon.svg?raw'
+import ArrowIcon from './icons/arrow-left-icon.svg?raw'
+import StarIcon from './icons/star-icon.svg?raw'
+import ChevronIcon from './icons/chevron-left-icon.svg?raw'
+import UploadIcon from './icons/upload-icon.svg?raw'
+
+const projectDirectory = 'project/4'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Addition 🛒 | Shopify Store Design</title>
+  <script type="text/javascript" src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <section id="navbar" class="w-full bg-[#f5f5f5]">
+    <div class="relative w-full max-w-7xl flex items-center justify-between py-4 px-8 mx-auto">
+      <img src={`/assets/${projectDirectory}/logo.png`} alt="logo" srcset="">
+      <div id="menu" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-4">
+        <div class="relative cursor-pointer after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:rounded-full after:bg-black after:hover:w-full after:transition-all after:duration-200">
+          <span class="font-medium">New Releases</span>
+        </div>
+        <div class="relative cursor-pointer after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:rounded-full after:bg-black after:hover:w-full after:transition-all after:duration-200">
+          <span class="font-medium">Men</span>
+        </div>
+        <div class="relative cursor-pointer after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:rounded-full after:bg-black after:hover:w-full after:transition-all after:duration-200">
+          <span class="font-medium">Women</span>
+        </div>
+        <div class="relative cursor-pointer after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:rounded-full after:bg-black after:hover:w-full after:transition-all after:duration-200">
+          <span class="font-medium">Sale</span>
+        </div>
+      </div>
+      <div id="side-menu" class="flex items-center gap-4">
+        <div class="relative w-12 aspect-square rounded-full bg-transparent hover:bg-black transition-color duration-200 flex items-center justify-center hover:text-white cursor-pointer">
+          <Fragment set:html={SearchIcon} />
+        </div>
+        <div class="relative w-12 aspect-square rounded-full bg-transparent hover:bg-black transition-color duration-200 flex items-center justify-center hover:text-white cursor-pointer">
+          <Fragment set:html={UserIcon} />
+        </div>
+        <div class="relative w-12 aspect-square rounded-full bg-transparent hover:bg-black transition-color duration-200 flex items-center justify-center hover:text-white cursor-pointer">
+          <Fragment set:html={HeartIcon} />
+        </div>
+        <div class="relative w-12 aspect-square rounded-full bg-transparent hover:bg-black transition-color duration-200 flex items-center justify-center hover:text-white cursor-pointer">
+          <Fragment set:html={BagIcon} />
+          <div id="badge" class="bg-[#ff9800] rounded-full w-4 aspect-square text-xs absolute top-2 right-2 flex items-center justify-center text-black">1</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main class="relative w-full">
+    <div class="w-full max-w-7xl mx-auto flex flex-col px-8">
+      <div class="grid grid-cols-2 py-16">
+        <div class="flex gap-8">
+          <div class="flex gap-8 flex flex-col gap-8">
+            <img src={`/assets/${projectDirectory}/1.jpg`} alt="1.jpg" srcset="" class="aspect-square w-16 object-cover cursor-pointer">
+            <img src={`/assets/${projectDirectory}/2.jpg`} alt="2.jpg" srcset="" class="aspect-square w-16 object-cover cursor-pointer">
+            <img src={`/assets/${projectDirectory}/3.jpg`} alt="3.jpg" srcset="" class="aspect-square w-16 object-cover cursor-pointer">
+            <img src={`/assets/${projectDirectory}/4.jpg`} alt="4.jpg" srcset="" class="aspect-square w-16 object-cover cursor-pointer">
+            <img src={`/assets/${projectDirectory}/5.jpg`} alt="5.jpg" srcset="" class="aspect-square w-16 object-cover cursor-pointer">
+          </div>
+          <div class="relative">
+            <div class="relative">
+              <img src={`/assets/${projectDirectory}/1.jpg`} alt="1.jpg" class="w-full aspect-[3/4] object-cover">
+              <div id="thumbnail-control" class="absolute bottom-8 right-8 flex items-center gap-4">
+                <Fragment set:html={ArrowIcon} />
+                <Fragment set:html={ArrowIcon} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4 w-8/12 mx-auto">
+          <h1 class="font-archivo text-2xl font-bold">Jumpa Cargo Pant GD Indigo</h1>
+          <div class="flex items-center gap-4">
+            <div class="ratings flex items-center">
+              <Fragment set:html={StarIcon} />
+              <Fragment set:html={StarIcon} />
+              <Fragment set:html={StarIcon} />
+              <Fragment set:html={StarIcon} />
+              <Fragment set:html={StarIcon} />
+            </div>
+            <span class="text-sm">44 Reviews</span>
+          </div>
+          <span class="font-semibold py-4 text-4xl">$120</span>
+          <div class="flex flex-col gap-2">
+            <span>Select Colour</span>
+            <div class="flex items-center gap-4">
+              <div class="w-12 aspect-square rounded-full bg-white border border-[#eee] cursor-pointer"></div>
+              <div class="w-12 aspect-square rounded-full bg-black border border-[#eee] cursor-pointer"></div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <span>Select Size</span>
+            <div class="flex items-center gap-4">
+              <div class="border border-black w-12 aspect-square flex items-center justify-center font-medium cursor-pointer">
+                S
+              </div>
+              <div class="border border-gray-500 w-12 aspect-square flex items-center justify-center font-medium text-gray-500 cursor-pointer">
+                M
+              </div>
+              <div class="border border-black w-12 aspect-square flex items-center justify-center font-medium cursor-pointer">
+                L
+              </div>
+              <div class="border border-black w-12 aspect-square flex items-center justify-center font-medium cursor-pointer">
+                XL
+              </div>
+            </div>
+          </div>
+          <button class="w-full py-4 border border-black bg-black text-white">Add to Bag</button>
+          <button class="w-full py-4 border border-black">Favourite</button>
+          <span class="font-medium text-sm tracking-wide">Sit pretium tellus fermentum volutpat nam aliquam eget blandit. A id consectetur semper purus neque egestas pharetra. Fermentum vel ipsum sit eu tincidunt orci.</span>
+          <a class="underline font-medium text-sm cursor-pointer">View product details</a>
+          <div class="divider"></div>
+          <div id="shipping" class="flex flex-col w-full gap-4">
+            <div class="flex justify-between items-center w-full">
+              <span class="font-medium">Shipping and returns</span>
+              <Fragment set:html={ChevronIcon} />
+            </div>
+            <span>Free standard shipping on orders $50+ and free 60-day returns for Nike Members. <a class="underline cursor-pointer">Learn more.</a></span>
+            <span><a class="underline cursor-pointer">Return Policy</a> exclusions apply.</span>
+            <span>Pick-up available.</span>
+          </div>
+          <div class="divider"></div>
+          
+          <div id="reviews" class="flex flex-col w-full gap-4">
+            <div class="flex justify-between items-center w-full">
+              <span class="font-medium">Reviews (2)</span>
+              <Fragment set:html={ChevronIcon} />
+            </div>
+            <a class="underline cursor-pointer font-medium">Write a review</a>
+            <div class="flex flex-col">
+              <p class="font-bold text-lg">Great Product</p>
+              <div class="flex items-center gap-2">
+                <div class="ratings flex items-center">
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                </div>
+                <span class="dot">•</span>
+                <span class="text-xs">Jerome Bell</span>
+                <span class="dot">•</span>
+                <span class="text-xs">11 November 2023</span>
+              </div>
+              <span>Id quis gravida porttitor iaculis in. Malesuada sit sit adipiscing adipiscing vitae in.</span>
+            </div>
+            <div class="flex flex-col">
+              <p class="font-bold text-lg">Great Product</p>
+              <div class="flex items-center gap-2">
+                <div class="ratings flex items-center">
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                </div>
+                <span class="dot">•</span>
+                <span class="text-xs">Jerome Bell</span>
+                <span class="dot">•</span>
+                <span class="text-xs">11 November 2023</span>
+              </div>
+              <span>Id quis gravida porttitor iaculis in. Malesuada sit sit adipiscing adipiscing vitae in.</span>
+            </div>
+            <div class="flex flex-col">
+              <p class="font-bold text-lg">Great Product</p>
+              <div class="flex items-center gap-2">
+                <div class="ratings flex items-center">
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                  <Fragment set:html={StarIcon} />
+                </div>
+                <span class="dot">•</span>
+                <span class="text-xs">Jerome Bell</span>
+                <span class="dot">•</span>
+                <span class="text-xs">11 November 2023</span>
+              </div>
+              <span>Id quis gravida porttitor iaculis in. Malesuada sit sit adipiscing adipiscing vitae in.</span>
+            </div>
+            <a class="cursor-pointer underline font-medium">More review</a>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h1 class="text-2xl font-bold">HOW OTHERS ARE WEARING IT</h1>
+        <span class="text-xl">Upload your photo for a chance to be featured.</span>
+        <div class="grid grid-cols-3 gap-8">
+          <img src={`/assets/${projectDirectory}/6.jpg`} alt="" srcset="" class="w-full aspect-square object-cover object-top">
+          <img src={`/assets/${projectDirectory}/7.jpg`} alt="" srcset="" class="w-full aspect-square object-cover object-top">
+          <div id="upload-photo" class="w-full aspect-square bg-[#f5f5f5] flex flex-col items-center justify-center cursor-pointer">
+            <span class="font-medium">Upload your Photo</span>
+            <div class="bg-white rounded-full w-12 aspect-square flex items-center justify-center">
+              <Fragment set:html={UploadIcon} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full bg-[#f5f5f5] my-8 p-8">
+      <div class="w-full max-w-7xl mx-auto px-8 grid grid-cols-2 gap-8">
+        <div class="relative w-full aspect-square">
+          <img src={`/assets/${projectDirectory}/8.jpg`} alt="" srcset="" class="w-full aspect-square object-cover object-top">
+          <div class="w-full aspect-square bg-black/25 absolute top-0 left-0 flex items-center justify-center">
+            <span class="text-white font-medium text-3xl">Men</span>
+          </div>
+        </div>
+        <div class="relative w-full aspect-square">
+          <img src={`/assets/${projectDirectory}/3.jpg`} alt="" srcset="" class="w-full aspect-square object-cover object-top">
+          <div class="w-full aspect-square bg-black/25 absolute top-0 left-0 flex items-center justify-center">
+            <span class="text-white font-medium text-3xl">Women</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative w-full p-8">
+      <div class="w-full max-w-7xl mx-auto px-8 flex flex-col gap-8">
+        <div class="flex items-center justify-between">
+          <p class="font-semibold text-4xl">SIMILIAR ITEMS</p>
+          <div id="similiar-control" class="flex items-center gap-4">
+            <Fragment set:html={ArrowIcon} />
+            <Fragment set:html={ArrowIcon} />
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="flex flex-col gap-4">
+            <img src={`/assets/${projectDirectory}/9.jpg`} alt="" class="w-full aspect-square object-cover object-top">
+            <h1 class="font-medium text-2xl">Winter dress</h1>
+            <span class="font-medium text-2xl">$120</span>
+            <a class="underline font-medium cursor-pointer">Add to cart</a>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img src={`/assets/${projectDirectory}/3.jpg`} alt="" class="w-full aspect-square object-cover object-top">
+            <h1 class="font-medium text-2xl">Winter dress</h1>
+            <span class="font-medium text-2xl">$120</span>
+            <a class="underline font-medium cursor-pointer">Add to cart</a>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img src={`/assets/${projectDirectory}/10.jpg`} alt="" class="w-full aspect-square object-cover object-top">
+            <h1 class="font-medium text-2xl">Winter dress</h1>
+            <span class="font-medium text-2xl">$120</span>
+            <a class="underline font-medium cursor-pointer">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="relative bg-black w-full text-white">
+    <div class="w-full max-w-7xl mx-auto px-8 pt-16 pb-8">
+      <div class="grid grid-cols-10 gap-8">
+        <div class="col-span-3 flex flex-col gap-4">
+          <img src={`/assets/${projectDirectory}/logoDark.png`} alt="" class="w-36">
+          <span class="text-xs font-light">Sit aliquam in nascetur gravida. Eget dictum quis tincidunt risus. Suspendisse sit nunc phasellus.</span>
+          <span class="py-1 font-medium text-xl">(239) 555-0108</span>
+          <span class="font-medium">info@korcloth.com</span>
+        </div>
+        <div class="col-span-4 grid grid-cols-2">
+          <div class="flex flex-col gap-6">
+            <h1 class="text-lg font-medium">Quick links</h1>
+            <div class="flex flex-col gap-4">
+              <span class="cursor-pointer text-sm">About Us</span>
+              <span class="cursor-pointer text-sm">Contact</span>
+              <span class="cursor-pointer text-sm">Shipping Info</span>
+              <span class="cursor-pointer text-sm">Returns</span>
+              <span class="cursor-pointer text-sm">FAQs</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-6">
+            <h1 class="text-lg font-medium">Follow us</h1>
+            <div class="flex flex-col gap-4">
+              <span class="cursor-pointer text-sm">Facebook</span>
+              <span class="cursor-pointer text-sm">X</span>
+              <span class="cursor-pointer text-sm">Instagram</span>
+              <span class="cursor-pointer text-sm">Youtube</span>
+              <span class="cursor-pointer text-sm">LinkedIn</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-3 flex flex-col">
+          <span class="text-lg">Sign up for out newsletter</span>
+          <span class="text-gray-500 font-light">Fashion and lifestyle every week</span>
+          <form action="" class="flex flex-col gap-4 my-4">
+            <input type="text" placeholder="Your Email Address" class="border border-white p-4 bg-transparent">
+            <button class="w-full py-4 text-black bg-white">Sign up</button>
+          </form>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-12 text-gray-500">
+        <span>&copy; Korcloth, 2023</span>
+        <div class="flex items-center gap-4">
+          <span class="transition-color duration-200 hover:text-white cursor-pointer">Term and Conditions</span>
+          <span class="transition-color duration-200 hover:text-white cursor-pointer">Legal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
