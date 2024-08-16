@@ -10,7 +10,7 @@ const projectDir = "/assets/fmc/blog-preview-card";
   >
     <div
       id="card"
-      class="w-full max-w-96 rounded-[20px] h-auto p-6 flex flex-col bg-white gap-6 card-shadow"
+      class="w-full max-w-96 rounded-[20px] h-auto p-6 flex flex-col bg-white gap-6 card-shadow border border-project-black"
     >
       <img
         id="card-img"
@@ -26,7 +26,8 @@ const projectDir = "/assets/fmc/blog-preview-card";
           <span class="font-bold text-sm text-project-black">Learning</span>
         </div>
         <span class="text-sm text-project-black">Published 21 Dec 2023</span>
-        <span class="font-extrabold text-2xl text-project-black"
+        <span
+          class="font-extrabold text-2xl text-project-black transition-colors duration-200 hover:text-project-yellow hover:cursor-pointer"
           >HTML & CSS foundations</span
         >
         <span class="font-medium text-project-shade"
@@ -69,11 +70,19 @@ const projectDir = "/assets/fmc/blog-preview-card";
     background-color: var(--yellow);
   }
 
+  .hover\:\text-project-yellow:hover {
+    color: var(--yellow);
+  }
+
   .text-project-black {
     color: var(--black);
   }
 
   .text-project-shade {
     color: var(--shade);
+  }
+
+  .border-project-black {
+    border-color: var(--black);
   }
 </style>
