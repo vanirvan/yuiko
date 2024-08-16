@@ -1,0 +1,79 @@
+---
+import ProjectLayout from "../../../layouts/ProjectLayout.astro";
+
+const projectDir = "/assets/fmc/blog-preview-card";
+---
+
+<ProjectLayout title="Blog Preview Card">
+  <main
+    class="relative w-full bg-project-yellow h-full min-h-svh max-h-svh overflow-hidden flex flex-col justify-center items-center font-figtree p-6"
+  >
+    <div
+      id="card"
+      class="w-full max-w-96 rounded-[20px] h-auto p-6 flex flex-col bg-white gap-6 card-shadow"
+    >
+      <img
+        id="card-img"
+        src={`${projectDir}/card-img.png`}
+        alt="blog preview"
+        class="bg-project-yellow rounded-[10px] w-full h-auto"
+      />
+      <div id="content" class="flex flex-col gap-3">
+        <div
+          id="category"
+          class="rounded-[4px] bg-project-yellow px-3 py-1 w-max"
+        >
+          <span class="font-bold text-sm text-project-black">Learning</span>
+        </div>
+        <span class="text-sm text-project-black">Published 21 Dec 2023</span>
+        <span class="font-extrabold text-2xl text-project-black"
+          >HTML & CSS foundations</span
+        >
+        <span class="font-medium text-project-shade"
+          >These languages are the backbone of every website, defining
+          structure, content, and presentation.</span
+        >
+      </div>
+      <div id="author" class="flex items-center gap-3">
+        <img
+          src={`${projectDir}/userpic.png`}
+          alt="user pic"
+          class="w-8 h-8 rounded-full"
+        />
+        <span class="text-sm font-extrabold text-project-black"
+          >Greg Hooper</span
+        >
+      </div>
+    </div>
+  </main>
+</ProjectLayout>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+  :root {
+    --yellow: #f4d04e;
+    --black: #111111;
+    --shade: #6b6b6b;
+  }
+
+  .card-shadow {
+    box-shadow: 8px 8px black;
+  }
+
+  .font-figtree {
+    font-family: "Figtree", sans-serif;
+  }
+
+  .bg-project-yellow {
+    background-color: var(--yellow);
+  }
+
+  .text-project-black {
+    color: var(--black);
+  }
+
+  .text-project-shade {
+    color: var(--shade);
+  }
+</style>
