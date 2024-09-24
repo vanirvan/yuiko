@@ -171,7 +171,45 @@ import EmptyIllustration from "/assets/fmc/mortgage-repayment-calculator/illustr
   const clearAllButton = document.getElementById("clear-all-button");
   const submitButton = document.getElementById("mortgage-submit");
 
-  clearAllButton?.addEventListener("click", function (e) {
+  function calculateRepayment(
+    amount: number,
+    years: number,
+    interestRate: number,
+    type: string,
+  ) {
+    const monthlyRate = interestRate / 100 / 12;
+    const totalPayment = years * 12;
+
+    const format = new Intl.NumberFormat("en-IE", {
+      style: "currency",
+      currency: "EUR",
+      minimumFractionDigits: 2,
+    });
+
+    if (type == "repayment") {
+      const monthlyRepayment =
+        (amount * (monthlyRate * Math.pow(1 + monthlyRate, totalPayment))) /
+        (Math.pow(1 + monthlyRate, totalPayment) - 1);
+      const totalRepayment = monthlyRepayment * totalPayment;
+
+      return {
+        monthlyRepayment: format.format(monthlyRepayment),
+        totalPayment: format.format(totalRepayment),
+      };
+    } else if (type === "interest") {
+      const monthlyRepayment = amount * monthlyRate;
+      const totalRepayment = monthlyRepayment * totalPayment + amount;
+
+      return {
+        monthlyRepayment: format.format(monthlyRepayment),
+        totalPayment: format.format(totalRepayment),
+      };
+    } else {
+      throw new Error("Invalid Mortgage Type: " + type);
+    }
+  }
+
+  clearAllButton?.addEventListener("click", function () {
     // radio button need to be initialized after click to prevent "null" value
     const radioMortgageType = document.querySelector(
       'input[name="mortgage-type"]:checked',
@@ -189,27 +227,22 @@ import EmptyIllustration from "/assets/fmc/mortgage-repayment-calculator/illustr
     if (radioMortgageType) {
       radioMortgageType.checked = false;
     }
-
-    if (mortgageContent) {
-      mortgageContent.innerHTML = `
-      <div
-          class="flex flex-col items-center justify-center gap-4 w-full h-full"
-        >
-          <Fragment set:html={EmptyIllustration} />
-          <h1 class="font-semibold text-white text-2xl text-center">
-            Result shown here
-          </h1>
-          <h2 class="text-center text-slate-300">
-            Complete the form and click "calculate repayments" to see what your
-            monthly repayments would be.
-          </h2>
-        </div>
-      `;
-    }
   });
 
   submitButton?.addEventListener("click", function (e) {
     e.preventDefault();
+
+    // radio button need to be initialized after click to prevent "null" value
+    const radioMortgageType = document.querySelector(
+      'input[name="mortgage-type"]:checked',
+    ) as HTMLInputElement | null;
+
+    const { monthlyRepayment, totalPayment } = calculateRepayment(
+      inputMortgageAmount ? +inputMortgageAmount.value : 0,
+      inputMortgageTerm ? +inputMortgageTerm.value : 0,
+      inputInterestRate ? +inputInterestRate.value : 0,
+      radioMortgageType ? radioMortgageType.value : "",
+    );
 
     if (mortgageContent) {
       mortgageContent.innerHTML = `
@@ -222,13 +255,13 @@ import EmptyIllustration from "/assets/fmc/mortgage-repayment-calculator/illustr
         <div class="relative bg-[#d5dc47] rounded-md pt-1">
           <div class="relative bg-[#0e2431] rounded-md p-4 flex flex-col">
             <p class="text-slate-300">Your monthly repayments</p>
-            <p class="text-[#d5dc47] font-bold text-[3.5rem]">€1,797.74</p>
+            <p class="text-[#d5dc47] font-bold text-[3.5rem]">${monthlyRepayment}</p>
             <div class="bg-[#324855] w-full rounded-full h-px"></div>
             <div class="flex flex-col gap-2 mt-4">
               <span class="text-slate-300"
                 >Total you'll repay over the term</span
               >
-              <span class="text-white font-bold text-2xl">€539,322.94</span>
+              <span class="text-white font-bold text-2xl">${totalPayment}</span>
             </div>
           </div>
         </div>
