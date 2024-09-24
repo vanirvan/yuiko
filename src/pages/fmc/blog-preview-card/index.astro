@@ -6,31 +6,31 @@ const projectDir = "/assets/fmc/blog-preview-card";
 
 <ProjectLayout title="Blog Preview Card">
   <main
-    class="relative w-full bg-project-yellow h-full min-h-svh max-h-svh overflow-hidden flex flex-col justify-center items-center font-figtree p-6"
+    class="bg-project-yellow font-figtree relative flex h-full max-h-svh min-h-svh w-full flex-col items-center justify-center overflow-hidden p-6"
   >
     <div
       id="card"
-      class="w-full max-w-96 rounded-[20px] h-auto p-6 flex flex-col bg-white gap-6 card-shadow border border-project-black"
+      class="card-shadow border-project-black flex h-auto w-full max-w-96 flex-col gap-6 rounded-[20px] border bg-white p-6"
     >
       <img
         id="card-img"
         src={`${projectDir}/card-img.png`}
         alt="blog preview"
-        class="bg-project-yellow rounded-[10px] w-full h-auto"
+        class="bg-project-yellow h-auto w-full rounded-[10px]"
       />
       <div id="content" class="flex flex-col gap-3">
         <div
           id="category"
-          class="rounded-[4px] bg-project-yellow px-3 py-1 w-max"
+          class="bg-project-yellow w-max rounded-[4px] px-3 py-1"
         >
-          <span class="font-bold text-sm text-project-black">Learning</span>
+          <span class="text-project-black text-sm font-bold">Learning</span>
         </div>
-        <span class="text-sm text-project-black">Published 21 Dec 2023</span>
+        <span class="text-project-black text-sm">Published 21 Dec 2023</span>
         <span
-          class="font-extrabold text-2xl text-project-black transition-colors duration-200 hover:text-project-yellow hover:cursor-pointer"
+          class="text-project-black hover:text-project-yellow text-2xl font-extrabold transition-colors duration-200 hover:cursor-pointer"
           >HTML & CSS foundations</span
         >
-        <span class="font-medium text-project-shade"
+        <span class="text-project-shade font-medium"
           >These languages are the backbone of every website, defining
           structure, content, and presentation.</span
         >
@@ -39,9 +39,9 @@ const projectDir = "/assets/fmc/blog-preview-card";
         <img
           src={`${projectDir}/userpic.png`}
           alt="user pic"
-          class="w-8 h-8 rounded-full"
+          class="h-8 w-8 rounded-full"
         />
-        <span class="text-sm font-extrabold text-project-black"
+        <span class="text-project-black text-sm font-extrabold"
           >Greg Hooper</span
         >
       </div>

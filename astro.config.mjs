@@ -9,6 +9,6 @@ export default defineConfig({
   integrations: [tailwind(), mdx(), react()],
   redirects: {
     "/transform": "/",
-    "/fmc": "/"
-  }
+    "/fmc": "/",
+  },
 });
