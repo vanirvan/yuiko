@@ -120,35 +120,36 @@ import ProjectLayout from "~/layouts/ProjectLayout.astro";
     font-family: "DM Sans", sans-serif;
   }
 
-  /* grid template areas */
-  /* assigning areas name to each section item */
-  #bento-grid > div:nth-child(1) {
-    grid-area: social;
-  }
-  #bento-grid > div:nth-child(2) {
-    grid-area: manage;
-  }
-  #bento-grid > div:nth-child(3) {
-    grid-area: mantain;
-  }
-  #bento-grid > div:nth-child(4) {
-    grid-area: schedule;
-  }
-  #bento-grid > div:nth-child(5) {
-    grid-area: grow;
-  }
-  #bento-grid > div:nth-child(6) {
-    grid-area: faster;
-  }
-  #bento-grid > div:nth-child(7) {
-    grid-area: create;
-  }
-  #bento-grid > div:nth-child(8) {
-    grid-area: write;
-  }
-
   /* apply grid areas only to lg: width */
   @media screen and (width >= 1024px) {
+    /* grid template areas */
+    /* assigning areas name to each section item */
+    /* should be assigned at >= 1024px, bellow that, layout scrambled */
+    #bento-grid > div:nth-child(1) {
+      grid-area: social;
+    }
+    #bento-grid > div:nth-child(2) {
+      grid-area: manage;
+    }
+    #bento-grid > div:nth-child(3) {
+      grid-area: mantain;
+    }
+    #bento-grid > div:nth-child(4) {
+      grid-area: schedule;
+    }
+    #bento-grid > div:nth-child(5) {
+      grid-area: grow;
+    }
+    #bento-grid > div:nth-child(6) {
+      grid-area: faster;
+    }
+    #bento-grid > div:nth-child(7) {
+      grid-area: create;
+    }
+    #bento-grid > div:nth-child(8) {
+      grid-area: write;
+    }
+
     #bento-grid {
       grid-template-areas:
         "create social social schedule"
