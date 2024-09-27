@@ -1,0 +1,11 @@
+---
+import ProjectLayout from "~/layouts/ProjectLayout.astro";
+
+import { AgeCalculatorApp } from "~/pages/fmc/age-calculator-app/";
+---
+
+<ProjectLayout title="Age Calculator App">
+  <main class="flex min-h-svh w-full flex-col gap-4">
+    <AgeCalculatorApp client:load />
+  </main>
+</ProjectLayout>
